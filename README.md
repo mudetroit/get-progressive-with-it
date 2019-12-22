@@ -18,4 +18,18 @@ have docker look below to see the necessary software to run locally.
 
 ## Without Docker
 - Node >= 8.4.0
+- Yarn
 - Postgres 
+
+## Getting started
+
+```bash
+> git clone https://github.com/mudetroit/get-progressive-with-it.git
+
+# Docker
+> docker-compose up
+
+# Without Docker
+> yarn install
+# More details coming soon
+```
