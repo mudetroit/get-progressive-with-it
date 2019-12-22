@@ -3,8 +3,9 @@
 __*Note: I am working on cleaning up the backend and client apps for this workshop, but they are
 orthagonal to the code we will be working on. Please check back soon for updates.*__
 
-We will be turning a relatively simple  Todo application into a fully featured PWA. The majority of
-our code will be working on developing a Service Worker capable of supporting the application.
+We will be turning a relatively simple  Todo application into a fully featured Progressive Web
+Aoolication(PWA). The majority of our code will be working on developing a Service Worker capable of
+supporting the application.
 
 ## Prerequisites
 
