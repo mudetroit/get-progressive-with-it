@@ -17,9 +17,9 @@ have docker look below to see the necessary software to run locally.
 - Docker Compose
 
 ## Without Docker
-- Node >= 8.4.0
+- Node >= 10
 - Yarn
-- Postgres 
+- Postgres >= 9
 
 ## Getting started
 
