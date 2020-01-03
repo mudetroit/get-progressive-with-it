@@ -1,2 +1,6 @@
 node_modules
 /*.log
+.cache
+test.sqlite
+/dist
+vapid-keys.json

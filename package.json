@@ -6,6 +6,13 @@
   "repository": "https://github.com/mudetroit/get-progressive-with-it.git",
   "author": "Matthew LaForest <matthewalaforest@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build-watch": "parcel watch ./client/index.html",
+    "start-watch": "nodemon server/index.js",
+    "dev": "concurrently --kill-others \"npm run start\" \"npm run build-watch\"",
+    "build": "parcel build ./client/index.html",
+    "start": "npm run build && node server/index.js"
+  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "concurrently": "^5.0.2",
