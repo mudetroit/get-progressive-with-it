@@ -1,0 +1,9 @@
+{
+  "name": "get-progressive-with-it",
+  "version": "0.1.0",
+  "description": "Get Progressive with it - Progressive Web App workshop course materials",
+  "main": "index.js",
+  "repository": "https://github.com/mudetroit/get-progressive-with-it.git",
+  "author": "Matthew LaForest <matthewalaforest@gmail.com>",
+  "license": "MIT"
+}
