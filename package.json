@@ -8,6 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "concurrently": "^5.0.2",
     "express": "^4.17.1",
     "finale-rest": "^1.1.0",
     "parcel-bundler": "^1.12.4",
