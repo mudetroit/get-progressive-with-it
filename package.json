@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/mudetroit/get-progressive-with-it.git",
   "author": "Matthew LaForest <matthewalaforest@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
