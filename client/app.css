@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 48px;
+}
+
+.app-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  padding: 0.25em;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-todoDetail {
+  display: none;
+
+  padding: 0.125em;
+
+  background-color: lightgrey;
+}
+
+.app-todosList,
+.app-todoDetail {
+  margin-top: 2.5em;
+}
+
+.app-todoDetail.active {
+  display: block;
+}
+
+.app-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 0.25em;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-header,
+.app-footer {
+  background-color: black;
+  color: white;
+}
+
+/* media queries */
+
+@media screen and (min-width: 1000px) {
+  body {
+    font-size: 16px;
+  }
+
+  .app-todosList {
+    float: left;
+
+    max-width: 200px;
+  }
+
+  .app-todoDetail {
+    display: block;
+    float: right;
+
+    width: calc(100% - 220px);
+  }
+}
+
+.todoList-list > li {
+  padding: 0.25em;
+}
+
+.todoList-listItem {
+  margin: 0.5em 0.25em;
+  box-shadow: 2px 2px darkgrey;
+  border: solid 1px black;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.todoList-listItem > a {
+  color: black;
+  text-decoration: none;
+}
+
+.todoList-listItem:hover > a {
+  color: blue;
+}
+
+.todoDetail-container {
+  margin: 0.25em;
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.todoDetail-actions {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
