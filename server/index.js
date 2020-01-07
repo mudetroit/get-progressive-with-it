@@ -1,4 +1,3 @@
-const fs = require("fs");
 const path = require("path");
 
 const express = require("express");
@@ -12,14 +11,9 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.static("dist"));
 
-app.get("*", function(request, response, next) {
+app.get("/todos/:todoId", function(request, response, next) {
   if (request.headers.accept.includes("text/html")) {
-    const html = fs.readFileSync(path.resolve("dist/index.html"), "utf8");
-
-    response
-      .status(200)
-      .contentType("text/html")
-      .send(html);
+    return response.sendFile(path.join(__dirname, "../dist", "index.html"));
   } else {
     next();
   }
