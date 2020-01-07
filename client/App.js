@@ -1,10 +1,8 @@
 import * as React from "react";
-import { Route, Redirect, useHistory, useParams } from "react-router-dom";
+import { Route, Redirect, useHistory } from "react-router-dom";
 
 import TodosList from "./TodosList";
 import TodoDetail from "./TodoDetail";
-
-let nextId = 1;
 
 export default function App() {
   const history = useHistory();
