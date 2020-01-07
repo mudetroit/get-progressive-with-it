@@ -12,8 +12,8 @@ function getDate({ dueDate, dueTime }) {
 }
 export default function TodoCreationItem({ onCreate }) {
   const [body, setBody] = React.useState("");
-  const [dueDate, setDueDate] = React.useState(null);
-  const [dueTime, setDueTime] = React.useState(null);
+  const [dueDate, setDueDate] = React.useState("");
+  const [dueTime, setDueTime] = React.useState("");
 
   return (
     <form
