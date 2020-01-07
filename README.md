@@ -34,3 +34,5 @@ have docker look below to see the necessary software to run locally.
 > yarn install
 > yarn dev
 ```
+
+Once the server has started visit: http://localhost:3000 where you should find the app running.
