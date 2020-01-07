@@ -9,7 +9,7 @@
   "scripts": {
     "build-watch": "parcel watch --hmr-port=39259 ./client/index.html",
     "start-watch": "nodemon server/index.js",
-    "dev": "concurrently --kill-others \"npm run start\" \"npm run build-watch\"",
+    "dev": "concurrently --kill-others \"npm run start-watch\" \"npm run build-watch\"",
     "build": "parcel build ./client/index.html",
     "start": "npm run build && node server/index.js"
   },
