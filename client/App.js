@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Route, Redirect, useHistory } from "react-router-dom";
 
+import NotificationIcon from "./icons/feed.svg";
 import TodosList from "./TodosList";
 import TodoDetail from "./TodoDetail";
 
@@ -36,6 +37,9 @@ export default function App() {
       <section className="app">
         <header className="app-header">
           <h1>Get Progressive with it</h1>
+          <span className="feedIcon">
+            <NotificationIcon />
+          </span>
         </header>
         <aside className="app-todosList">
           <TodosList

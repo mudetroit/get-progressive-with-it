@@ -17,6 +17,12 @@ body {
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.feedIcon {
+  width: 1em;
+  height: auto;
 }
 
 .app-todoDetail {
