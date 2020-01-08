@@ -37,7 +37,7 @@ exports.init = function init() {
                   pushed: false
                 }
               }).then(function([notification]) {
-                notification.push({ subscription, todo });
+                notification.push({ {subscription}, todo });
               });
             });
           });
