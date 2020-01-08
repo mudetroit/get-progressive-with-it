@@ -1,4 +1,4 @@
-const applicationServerKey = import("./vapid-keys.json");
+const applicationServerKey = import("../vapid-keys.json");
 
 function saveSubcription(subscription) {
   fetch("/todos", {
