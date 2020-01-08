@@ -10,6 +10,7 @@ const notifications = require("./notifications");
 const app = express();
 app.use(bodyParser.json());
 app.use(express.static("dist"));
+app.use(express.static("public"));
 
 app.get("/todos/:todoId", function(request, response, next) {
   if (request.headers.accept.includes("text/html")) {
