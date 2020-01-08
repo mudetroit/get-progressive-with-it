@@ -22,8 +22,10 @@ export default function TodoDetail({ todos, onDelete, onToggleComplete }) {
 
   return (
     <div className="todoDetail-container">
-      <div>{todo.complete ? "Complete" : "Incomplete"}</div>
-      <h1>{todo.body}</h1>
+      <header>
+        <h1>{todo.body}</h1>
+        <div>{todo.complete ? "Complete" : "Incomplete"}</div>
+      </header>
       <div className="todoDetail-actions">
         <form
           action={url}

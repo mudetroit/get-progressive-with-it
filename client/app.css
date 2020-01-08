@@ -7,12 +7,20 @@ body {
   font-size: 48px;
 }
 
-.app-header {
+.app {
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
+  bottom: 0;
+  left: 0;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.app-header {
   padding: 0.25em;
 
   display: flex;
@@ -23,6 +31,15 @@ body {
 .feedIcon {
   width: 1em;
   height: auto;
+
+  cursor: pointer;
+  color: inherit;
+  border: none;
+  background: none;
+}
+
+.app-todosList.inactive {
+  display: none;
 }
 
 .app-todoDetail {
@@ -33,21 +50,17 @@ body {
   background-color: lightgrey;
 }
 
-.app-todosList,
-.app-todoDetail {
-  margin-top: 2.5em;
-}
-
 .app-todoDetail.active {
   display: block;
+  float: left;
+}
+
+.app-todosList,
+.app-todoDetail {
+  height: 100%;
 }
 
 .app-footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
   padding: 0.25em;
 
   display: flex;
@@ -67,10 +80,18 @@ body {
     font-size: 16px;
   }
 
+  .app {
+    display: block;
+  }
+
   .app-todosList {
     float: left;
 
     max-width: 200px;
+  }
+
+  .app-todosList.inactive {
+    display: block;
   }
 
   .app-todoDetail {
@@ -78,6 +99,19 @@ body {
     float: right;
 
     width: calc(100% - 220px);
+  }
+
+  .app-todosList,
+  .app-todoDetail {
+    /* Total height minus header and footer */
+    height: calc(100% - 68px);
+  }
+
+  .app-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 }
 
@@ -104,12 +138,19 @@ body {
 }
 
 .todoDetail-container {
+  height: 100%;
   margin: 0.25em;
   background-color: white;
 
   display: flex;
   flex-direction: column;
-  justify-content: stretch;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todoDetail-container > header {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 

@@ -1,13 +1,23 @@
 import * as React from "react";
-import { Route, Redirect, useHistory } from "react-router-dom";
+import {
+  Route,
+  Redirect,
+  Switch,
+  useHistory,
+  useRouteMatch
+} from "react-router-dom";
 
+import subscribeToNotifications from "./subscribeToNotifications";
 import NotificationIcon from "./icons/feed.svg";
 import TodosList from "./TodosList";
 import TodoDetail from "./TodoDetail";
 
 export default function App() {
   const history = useHistory();
+  const todoMatch = useRouteMatch("/todos/:id");
   const [todos, setTodos] = React.useState();
+
+  const isTodoRoute = Boolean(todoMatch);
 
   React.useEffect(function() {
     let didCancel = false;
@@ -37,11 +47,13 @@ export default function App() {
       <section className="app">
         <header className="app-header">
           <h1>Get Progressive with it</h1>
-          <span className="feedIcon">
+          <button className="feedIcon" onClick={subscribeToNotifications}>
             <NotificationIcon />
-          </span>
+          </button>
         </header>
-        <aside className="app-todosList">
+        <aside
+          className={isTodoRoute ? "app-todosList inactive" : "app-todosList"}
+        >
           <TodosList
             todos={todos}
             onCreate={data => {
@@ -64,7 +76,10 @@ export default function App() {
             }}
           />
         </aside>
-        <main className="app-todoDetail">
+
+        <main
+          className={isTodoRoute ? "app-todoDetail active" : "app-todoDetail"}
+        >
           <Route path={"/todos/:id"}>
             <TodoDetail
               todos={todos}
