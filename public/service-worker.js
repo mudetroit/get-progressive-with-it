@@ -31,3 +31,13 @@ self.addEventListener("activate", event => {
     })
   );
 });
+
+self.addEventListener("push", event => {
+  let options = {
+    body: event.data.body,
+    icon: "android-icon-72x72.acef788a.png"
+  };
+  event.waitUntil(
+    self.registration.showNotification(event.data.title, options)
+  );
+});
