@@ -10,3 +10,8 @@ ReactDOM.render(
   </Router>,
   document.getElementById("root")
 );
+
+if ("serviceWorker" in navigator) {
+  const serviceWorkerPath = "/service-worker.js";
+  navigator.serviceWorker.register(serviceWorkerPath);
+}
