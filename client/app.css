@@ -81,13 +81,21 @@ body {
   }
 
   .app {
-    display: block;
+    display: grid;
+    grid-template-columns: 12.5em 1fr;
+    grid-template-rows: max-content 3fr max-content;
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+  }
+
+  .app-header {
+    grid-area: header;
   }
 
   .app-todosList {
-    float: left;
-
-    max-width: 200px;
+    grid-area: sidebar;
   }
 
   .app-todosList.inactive {
@@ -95,10 +103,8 @@ body {
   }
 
   .app-todoDetail {
+    grid-area: main;
     display: block;
-    float: right;
-
-    width: calc(100% - 220px);
   }
 
   .app-todosList,
@@ -108,10 +114,7 @@ body {
   }
 
   .app-footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    grid-area: footer;
   }
 }
 
