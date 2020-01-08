@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 const applicationServerKey = import("../vapid-keys.json");
-=======
-const applicationServerKey = import("./vapid-keys.json");
->>>>>>> :sparkles: (client) Setup push notifications
 
 function saveSubcription(subscription) {
   fetch("/todos", {
